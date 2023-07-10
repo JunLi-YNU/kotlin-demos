@@ -6,7 +6,7 @@ annotation class Anno
 @Deprecated("该类已经不再推荐使用")
 @Anno
 @Suppress("UNCHECKED_CAST")
-class MyDemoClass(age: Int) {
+class MyClass(age: Int) {
     var name: String = "kotlin";
 
     //定义一个私有构造器
@@ -31,11 +31,11 @@ class MyDemoClass(age: Int) {
     class Inner
 
     //定义一个扩展方法
-    fun MyDemoClass.show() {
+    fun MyClass.show() {
         println("一个扩展方法bar()")
     }
 
     //定义一个扩展属性
-    val MyDemoClass.sex: Int
+    val MyClass.sex: Int
         get() = 1
 }
