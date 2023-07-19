@@ -6,11 +6,11 @@ annotation class Anno
 @Deprecated("该类已经不再推荐使用")
 @Anno
 @Suppress("UNCHECKED_CAST")
-class MyClass(age: Int) {
+public class MyClass(var age: Int) {
     var name: String = "kotlin";
-
-    //定义一个私有构造器
-    private constructor() : this(28) {}
+    val price: Double = 40.0
+    //定义一个构造器
+    constructor() : this(28) {}
 
     //定义一个有参构造器
     constructor(name: String) : this(27) {
