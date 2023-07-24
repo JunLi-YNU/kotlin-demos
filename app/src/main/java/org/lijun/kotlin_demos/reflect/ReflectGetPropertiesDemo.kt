@@ -3,13 +3,13 @@ package org.lijun.kotlin_demos.reflect
 import kotlin.reflect.KMutableProperty1
 import kotlin.reflect.full.*
 
-fun main(args: Array<String>) {
+fun main() {
     //获取MyClass对应的KClass
     val clazz = MyClass::class
     //通过constructors属性获取KClass对象对应类的全部构造器
-    val ctors = clazz.constructors;
+    val myClassConstructors = clazz.constructors
     println("MyClass的全部构造器如下,使用forEach()方法:")
-    ctors.forEach() { println(it) }
+    myClassConstructors.forEach { println(it) }
     println("MyClass的构造器如下:")
     println(clazz.primaryConstructor)
 
@@ -36,7 +36,7 @@ fun main(args: Array<String>) {
     //通过declareMemberProperties属性获取KClass对象所声明的全部成员属性
     val declaredMemberProperties = clazz.declaredMemberFunctions
     println("MyClass声明的全部成员属性:")
-    declaredMemberProperties.forEach() { println(it) }
+    declaredMemberProperties.forEach { println(it) }
 
     //通过memberExtensionProperties属性获取LClass对象所代表的全部扩展属性
     val memberExtensionProperties = clazz.memberExtensionProperties
