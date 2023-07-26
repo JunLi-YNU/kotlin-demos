@@ -43,4 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     //引入kotlin反射包
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
+    //引入kotlin协程包
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
 }

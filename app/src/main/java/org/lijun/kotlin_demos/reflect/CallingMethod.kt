@@ -14,7 +14,7 @@ class CallingMethod {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val callingMethodClazz = CallingMethod::class
     val instance = callingMethodClazz.createInstance()
     val functions = callingMethodClazz.declaredFunctions

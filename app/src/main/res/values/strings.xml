@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">kotlin_demos</string>
+    <string name="button_coroutines_demo">Coroutine Demo</string>
+    <string name="textview_coroutines_show">Coroutine Show</string>
 </resources>

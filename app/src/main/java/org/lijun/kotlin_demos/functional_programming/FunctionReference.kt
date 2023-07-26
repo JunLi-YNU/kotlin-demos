@@ -2,7 +2,7 @@ package org.lijun.kotlin_demos.functional_programming
 
 fun isSmall(i: Int) = i < 5
 fun isSmall(str: String) = str.length < 5
-fun main(args: Array<String>) {
+fun main() {
     val intList = listOf(20, 30, 50, -30, -20)
     val resultList = intList.filter(::isSmall)
     println(resultList)

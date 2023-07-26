@@ -9,7 +9,7 @@ fun test(factory: (String) -> ConstructorReference) {
     println(instance.name)
 }
 
-fun main(args: Array<String>) {
+fun main() {
     test(::ConstructorReference)
     println(::ConstructorReference.javaConstructor)
 }

@@ -7,7 +7,7 @@ class CombinationFunction {
         return { x -> function2(function(x)) }
     }
 }
-fun main(args:Array<String>){
+fun main(){
     val combinationFunction:CombinationFunction = CombinationFunction()
     val function = combinationFunction.combination(combinationFunction::abs,combinationFunction::sqrt)
     println(function(20.0))
