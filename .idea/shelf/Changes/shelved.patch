@@ -1,0 +1,313 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"FindBugsConfigurable\">\n    <option name=\"make\" value=\"true\" />\n    <option name=\"effort\" value=\"default\" />\n    <option name=\"priority\" value=\"Medium\" />\n    <option name=\"excludeFilter\" value=\"\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\" />\n  <component name=\"SuppressionsComponent\">\n    <option name=\"suppComments\" value=\"[]\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/.idea/misc.xml	(date 1690963628491)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="FindBugsConfigurable">
+     <option name="make" value="true" />
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\nplugins {\n    id 'com.android.application' version '8.0.2' apply false\n    id 'com.android.library' version '8.0.2' apply false\n    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false\n}\n\ntask clean(type: Delete) {\n    delete rootProject.buildDir\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/build.gradle	(date 1690963657394)
+@@ -1,7 +1,7 @@
+ // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+-    id 'com.android.application' version '8.0.2' apply false
+-    id 'com.android.library' version '8.0.2' apply false
++    id 'com.android.application' version '8.1.0' apply false
++    id 'com.android.library' version '8.1.0' apply false
+     id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+ }
+ 
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># kotlin_demos\nSome basics of the Kotlin language.<br>\nkotlin编程语言的基础知识。\n> This is some small examples in the process of learning kotlin language.<br>\n> 这是在学习kotlin语言过程中，一些小的例子。<br>\n\n## Project submission principle\n> 1. Push the remote warehouse only after completing a chapter of content learning.<br>\n> 2. Make a local submission when completing a complete knowledge point under a chapter.<br>\n## 工程提交原则\n> 1、完成一个章节的内容学习后才进行一次远程仓库的推送。<br>\n> 2、完成一个章节下的一个完整的知识点时候进行一次本地提交。<br>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/README.md	(date 1690388991633)
+@@ -5,8 +5,8 @@
+ > 这是在学习kotlin语言过程中，一些小的例子。<br>
+ 
+ ## Project submission principle
+-> 1. Push the remote warehouse only after completing a chapter of content learning.<br>
+-> 2. Make a local submission when completing a complete knowledge point under a chapter.<br>
++>1. Push the remote warehouse only after completing a chapter of content learning.<br>
++>2. Make a local submission when completing a complete knowledge point under a chapter.<br>
+ ## 工程提交原则
+ > 1、完成一个章节的内容学习后才进行一次远程仓库的推送。<br>
+ > 2、完成一个章节下的一个完整的知识点时候进行一次本地提交。<br>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\n        android:fullBackupContent=\"@xml/backup_rules\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme.Kotlin_demos\"\n        tools:targetApi=\"31\">\n        <activity\n            android:name=\".CoroutinesActivity\"\n            android:exported=\"false\">\n            <meta-data\n                android:name=\"android.app.lib_name\"\n                android:value=\"\" />\n        </activity>\n        <activity\n            android:name=\".CorousLinesActivity\"\n            android:exported=\"false\">\n            <meta-data\n                android:name=\"android.app.lib_name\"\n                android:value=\"\" />\n        </activity>\n        <activity\n            android:name=\".MainActivity\"\n            android:exported=\"true\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/app/src/main/AndroidManifest.xml	(date 1690542884635)
+@@ -13,14 +13,7 @@
+         android:theme="@style/Theme.Kotlin_demos"
+         tools:targetApi="31">
+         <activity
+-            android:name=".CoroutinesActivity"
+-            android:exported="false">
+-            <meta-data
+-                android:name="android.app.lib_name"
+-                android:value="" />
+-        </activity>
+-        <activity
+-            android:name=".CorousLinesActivity"
++            android:name=".coroutines.CoroutinesDemoActivity"
+             android:exported="false">
+             <meta-data
+                 android:name="android.app.lib_name"
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n    id 'com.android.application'\n    id 'org.jetbrains.kotlin.android'\n}\n\nandroid {\n    compileSdk 32\n\n    defaultConfig {\n        applicationId \"org.lijun.kotlin_demos\"\n        minSdk 22\n        targetSdk 32\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n    compileOptions {\n        sourceCompatibility JavaVersion.VERSION_1_8\n        targetCompatibility JavaVersion.VERSION_1_8\n    }\n    kotlinOptions {\n        jvmTarget = '1.8'\n    }\n    namespace 'org.lijun.kotlin_demos'\n}\n\ndependencies {\n\n    implementation 'androidx.core:core-ktx:1.7.0'\n    implementation 'androidx.appcompat:appcompat:1.3.0'\n    implementation 'com.google.android.material:material:1.4.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'\n    testImplementation 'junit:junit:4.13.2'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\n    //引入kotlin反射包\n    implementation 'org.jetbrains.kotlin:kotlin-reflect'\n    //引入kotlin协程包\n    implementation(\"org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2\")\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/app/build.gradle	(date 1690543286585)
+@@ -44,5 +44,7 @@
+     //引入kotlin反射包
+     implementation 'org.jetbrains.kotlin:kotlin-reflect'
+     //引入kotlin协程包
+-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
++    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
++    //引入kotlin协程android环境使用插件
++    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_coroutines_demo.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".coroutines.CoroutinesDemoActivity\">\n\n    <Button\n        android:id=\"@+id/button_coroutines_demo\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"@string/button_coroutines_demo\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <TextView\n        android:id=\"@+id/textview_coroutines_show\"\n        android:layout_width=\"0dp\"\n        android:layout_height=\"0dp\"\n        android:text=\"@string/textview_coroutines_show\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toBottomOf=\"@+id/button_coroutines_demo\" />\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_coroutines_demo.xml b/app/src/main/res/layout/activity_coroutines_demo.xml
+--- a/app/src/main/res/layout/activity_coroutines_demo.xml	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/app/src/main/res/layout/activity_coroutines_demo.xml	(date 1690543752349)
+@@ -8,10 +8,12 @@
+ 
+     <Button
+         android:id="@+id/button_coroutines_demo"
+-        android:layout_width="wrap_content"
++        android:layout_width="0dp"
+         android:layout_height="wrap_content"
++        android:layout_marginEnd="5dp"
+         android:text="@string/button_coroutines_demo"
+-        app:layout_constraintEnd_toEndOf="parent"
++        android:textAllCaps="false"
++        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+@@ -20,8 +22,28 @@
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:text="@string/textview_coroutines_show"
++        android:textAllCaps="false"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/button_coroutines_demo" />
++
++    <Button
++        android:id="@+id/button_async_task_demo"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_marginStart="5dp"
++        android:text="@string/button_async_task_demo"
++        android:textAllCaps="false"
++        app:layout_constraintBottom_toBottomOf="@+id/button_coroutines_demo"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toEndOf="@+id/button_coroutines_demo"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/guideline2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="vertical"
++        app:layout_constraintGuide_percent="0.5" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/org/lijun/kotlin_demos/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.lijun.kotlin_demos\n\nimport androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle\n\n\nclass MainActivity : AppCompatActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        setContentView(R.layout.activity_main)\n//        GlobalScope.launch (Dispatchers.Main){  }\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/org/lijun/kotlin_demos/MainActivity.kt b/app/src/main/java/org/lijun/kotlin_demos/MainActivity.kt
+--- a/app/src/main/java/org/lijun/kotlin_demos/MainActivity.kt	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/app/src/main/java/org/lijun/kotlin_demos/MainActivity.kt	(date 1690543543465)
+@@ -1,13 +1,42 @@
+ package org.lijun.kotlin_demos
+ 
++import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
++import android.view.MotionEvent
++import android.view.View
++import org.lijun.kotlin_demos.coroutines.CoroutinesDemoActivity
++import java.time.Instant
+ 
+ 
+ class MainActivity : AppCompatActivity() {
++    private var eventDownX = 0.0F
++    private var eventDownY = 0.0F
++    private var eventMoveX = 0.0F
++    private var eventMoveY = 0.0F
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.activity_main)
+-//        GlobalScope.launch (Dispatchers.Main){  }
++
++
++    }
++
++    override fun onTouchEvent(event: MotionEvent?): Boolean {
++        if (event != null) {
++            when(event.action){
++                MotionEvent.ACTION_DOWN -> {
++                   eventDownX = event.x
++                }
++                MotionEvent.ACTION_MOVE -> {
++                    eventMoveX = event.x
++                }
++                MotionEvent.ACTION_UP -> {
++                    if(eventDownX - eventMoveX > 25){
++                        startActivity(Intent(this,CoroutinesDemoActivity::class.java))
++                    }
++                }
++            }
++        }
++        return super.onTouchEvent(event)
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/org/lijun/kotlin_demos/coroutines/CoroutinesDemoActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.lijun.kotlin_demos.coroutines\n\nimport androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle\nimport org.lijun.kotlin_demos.R\n\nclass CoroutinesDemoActivity : AppCompatActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        setContentView(R.layout.activity_coroutines_demo)\n\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/org/lijun/kotlin_demos/coroutines/CoroutinesDemoActivity.kt b/app/src/main/java/org/lijun/kotlin_demos/coroutines/CoroutinesDemoActivity.kt
+--- a/app/src/main/java/org/lijun/kotlin_demos/coroutines/CoroutinesDemoActivity.kt	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/app/src/main/java/org/lijun/kotlin_demos/coroutines/CoroutinesDemoActivity.kt	(date 1690545470113)
+@@ -1,13 +1,70 @@
+ package org.lijun.kotlin_demos.coroutines
+ 
+-import androidx.appcompat.app.AppCompatActivity
++import android.annotation.SuppressLint
++import android.os.AsyncTask
+ import android.os.Bundle
++import android.widget.Button
++import android.widget.TextView
++import androidx.appcompat.app.AppCompatActivity
++import kotlinx.coroutines.DelicateCoroutinesApi
++import kotlinx.coroutines.Dispatchers
++import kotlinx.coroutines.GlobalScope
++import kotlinx.coroutines.launch
++import kotlinx.coroutines.withContext
+ import org.lijun.kotlin_demos.R
+ 
++
+ class CoroutinesDemoActivity : AppCompatActivity() {
++    private var textViewCoroutinesShow: TextView? = null
++
++    @OptIn(DelicateCoroutinesApi::class)
++    @SuppressLint("StaticFieldLeak")
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.activity_coroutines_demo)
+ 
++        textViewCoroutinesShow = findViewById(R.id.textview_coroutines_show)
++        //使用传统异步任务执行异步任务
++        findViewById<Button>(R.id.button_coroutines_demo).also {
++            it.setOnClickListener {
++                object : AsyncTask<Void, Void, String>() {
++                    @Deprecated(
++                        "Deprecated in Java",
++                        ReplaceWith("\"开启异步任务，获取结果\"")
++                    )
++                    override fun doInBackground(vararg p0: Void?): String {
++                        return "使用AsyncTask开启异步任务，获取结果"
++                    }
++
++                    @Deprecated(
++                        "Deprecated in Java",
++                        ReplaceWith("textViewCoroutinesShow.text = result")
++                    )
++                    override fun onPostExecute(result: String?) {
++                        textViewCoroutinesShow?.text = result
++                    }
++
++                }.execute()
++            }
++        }
++        //使用协程执行异步任务
++        findViewById<Button>(R.id.button_async_task_demo).also {
++            it.setOnClickListener {
++                GlobalScope.launch(Dispatchers.Main) {
++                    getTextViewText()
++                }
++            }
++        }
++    }
++
++    private suspend fun getTextViewText() {
++        val str = getTextStr()
++        updateTextViewShow(str)
++    }
++
++    private suspend fun getTextStr() = withContext(Dispatchers.IO) { "使用withContext开启异步任务，获取结果" }
++
++    private fun updateTextViewShow(str: String) {
++        textViewCoroutinesShow?.text = str
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">kotlin_demos</string>\n    <string name=\"button_coroutines_demo\">Coroutine Demo</string>\n    <string name=\"textview_coroutines_show\">Coroutine Show</string>\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 52d8eb211b9cad1455af7a049d7d743dc096e1df)
++++ b/app/src/main/res/values/strings.xml	(date 1690539996137)
+@@ -1,5 +1,6 @@
+ <resources>
+     <string name="app_name">kotlin_demos</string>
+     <string name="button_coroutines_demo">Coroutine Demo</string>
++    <string name="button_async_task_demo">AsyncTask Demo</string>
+     <string name="textview_coroutines_show">Coroutine Show</string>
+ </resources>
+\ No newline at end of file
