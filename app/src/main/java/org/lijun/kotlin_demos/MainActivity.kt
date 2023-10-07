@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.widget.Button
 import org.lijun.kotlin_demos.coroutines.eg.activity.CoroutinesAsyncActivity
+import org.lijun.kotlin_demos.coroutines.eg.activity.ExceptionHandlerActivity
 import org.lijun.kotlin_demos.coroutines.eg.activity.UserInformationActivity
 
 
@@ -15,13 +16,14 @@ class MainActivity : AppCompatActivity() {
     private var eventDownY = 0.0F
     private var eventMoveX = 0.0F
     private var eventMoveY = 0.0F
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val buttonCoroutinesHttp = findViewById<Button>(R.id.button_coroutines_http)
         buttonCoroutinesHttp.setOnClickListener {
-            val intent = Intent(this,UserInformationActivity::class.java)
+            val intent = Intent(this, UserInformationActivity::class.java)
             startActivity(intent)
         }
         val buttonCoroutinesAsync = findViewById<Button>(R.id.button_coroutines_async)
@@ -29,20 +31,27 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CoroutinesAsyncActivity::class.java)
             startActivity(intent)
         }
+        val buttonCaughtException = findViewById<Button>(R.id.button_caught_exception)
+        buttonCaughtException.setOnClickListener {
+            val intent = Intent(this, ExceptionHandlerActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         if (event != null) {
-            when(event.action){
+            when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                   eventDownX = event.x
+                    eventDownX = event.x
                 }
+
                 MotionEvent.ACTION_MOVE -> {
                     eventMoveX = event.x
                 }
+
                 MotionEvent.ACTION_UP -> {
-                    if(eventDownX - eventMoveX > 25){
+                    if (eventDownX - eventMoveX > 25) {
                         startActivity(Intent(this, CoroutinesAsyncActivity::class.java))
                     }
                 }

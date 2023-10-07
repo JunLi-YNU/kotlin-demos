@@ -13,7 +13,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_coroutines_async" />
+        app:layout_constraintTop_toBottomOf="@+id/button_caught_exception" />
 
     <Button
         android:id="@+id/button_coroutines_http"
@@ -34,5 +34,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_coroutines_http" />
+
+    <Button
+        android:id="@+id/button_caught_exception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/button_exception"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_coroutines_async" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,11 +10,11 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.coroutines.yield
 import java.io.BufferedReader
 import java.io.FileReader
+import java.lang.Exception
 
 /**
  * 协程的取消
@@ -123,7 +123,7 @@ class Cancellation {
     //use函数中不需要释放资源，底层已经实现了资源的释放
     fun cancelAndReleaseResourcesByUse() = runBlocking {
         var br =
-            BufferedReader(FileReader("/Users/junli/AndroidStudioProjects/my_workspace/kotlin_demos/app/src/main/java/org/lijun/kotlin_demos/coroutines/construction/携程的构建方法.md"))
+            BufferedReader(FileReader("/Users/junli/AndroidStudioProjects/my_workspace/kotlin_demos/app/src/main/java/org/lijun/kotlin_demos/coroutines/construction/协程的构建方法.md"))
         with(br) {
             var line: String?
             try {
@@ -137,7 +137,7 @@ class Cancellation {
             }
         }
 
-        BufferedReader(FileReader("/Users/junli/AndroidStudioProjects/my_workspace/kotlin_demos/app/src/main/java/org/lijun/kotlin_demos/coroutines/construction/携程的构建方法.md"))
+        BufferedReader(FileReader("/Users/junli/AndroidStudioProjects/my_workspace/kotlin_demos/app/src/main/java/org/lijun/kotlin_demos/coroutines/construction/协程的构建方法.md"))
             .use {
                 var line: String?
                 while (true) {

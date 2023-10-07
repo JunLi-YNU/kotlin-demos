@@ -50,4 +50,5 @@
     <string name="button_coroutines_http">Coroutines+Retrofit+ViewModel+LiveData+DataBinding</string>
     <string name="button_coroutines_async">Coroutines Or Async</string>
     <string name="textview_hint_retrofit">Information obtained from the internet</string>
+    <string name="button_exception">Generate Exception</string>
 </resources>
