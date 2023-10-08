@@ -1,4 +1,4 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
@@ -17,11 +17,12 @@ class CombineAsync {
         }
         println("Completed in $executedTime ms.")
     }
+
     fun wrongUseCombineAsync() = runBlocking {
         val executedTime = measureTimeMillis {
             //错误的使用方法，这时的协程是同步的
-            val first = async{ doCoroutine()}.await()
-            val second = async{ doCoroutine()}.await()
+            val first = async { doCoroutine() }.await()
+            val second = async { doCoroutine() }.await()
             println("The result: ${first + second}")
         }
         println("Completed in $executedTime ms.")
@@ -32,6 +33,7 @@ class CombineAsync {
         return 10
     }
 }
+
 fun main() {
     var combineAsync: CombineAsync = CombineAsync()
     combineAsync.combineAsync()

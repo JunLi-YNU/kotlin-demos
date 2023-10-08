@@ -1,4 +1,4 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
@@ -13,9 +13,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.supervisorScope
 import kotlinx.coroutines.withContext
-import java.lang.AssertionError
-import java.lang.IllegalStateException
-import java.util.IllegalFormatCodePointException
 
 class ExceptionDemo {
     //根协程的异常需要主动捕获

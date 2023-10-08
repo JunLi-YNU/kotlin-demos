@@ -1,4 +1,4 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay

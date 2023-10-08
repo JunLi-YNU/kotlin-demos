@@ -1,4 +1,4 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -14,7 +14,6 @@ import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.coroutines.yield
 import java.io.BufferedReader
 import java.io.FileReader
-import java.lang.Exception
 
 /**
  * 协程的取消

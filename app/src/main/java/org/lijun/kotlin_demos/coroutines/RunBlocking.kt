@@ -1,9 +1,8 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -20,6 +19,7 @@ fun main() {
     coroutinesBuilder()
     coroutinesJoin()
 }
+
 //启动一个协程的两种方式
 fun coroutinesBuilder() = runBlocking {
     //1.launch 不带返回值

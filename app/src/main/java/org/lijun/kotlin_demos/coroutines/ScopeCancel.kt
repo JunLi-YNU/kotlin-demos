@@ -1,4 +1,4 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,10 +25,11 @@ class ScopeCancel {
         //由于runBlocking的作用域与CoroutineScope不同，所以runBlocking不会等待CoroutineScope中的协程执行完成
         delay(2000)
     }
+
     fun scopeCancelBrotherCoroutine() = runBlocking {
         //CoroutineScope作用域是独立的，并没有继承runBlocking
         val scope = CoroutineScope(Dispatchers.Default)
-        val jobFirst =scope.launch {
+        val jobFirst = scope.launch {
             delay(1000)
             println("JobFirst finished.")
         }
@@ -43,7 +44,8 @@ class ScopeCancel {
         delay(2000)
     }
 }
-fun main(){
+
+fun main() {
     val scopeCancel = ScopeCancel()
     scopeCancel.scopeCancel()
     scopeCancel.scopeCancelBrotherCoroutine()

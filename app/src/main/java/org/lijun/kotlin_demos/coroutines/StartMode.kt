@@ -1,6 +1,5 @@
-package org.lijun.kotlin_demos.coroutines.construction
+package org.lijun.kotlin_demos.coroutines
 
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -20,6 +19,7 @@ class StartMode {
         //立即执行，协程调度前被取消，则立即进入取消响应状态
         job.cancel()
     }
+
     //2.CoroutineStart.ATOMIC
     fun coroutinesStartModeAtomic() = runBlocking {
         val job = launch(start = CoroutineStart.ATOMIC) {
@@ -33,6 +33,7 @@ class StartMode {
         //立即执行，协程调度执行到第一个挂起点的时候不响应取消
         job.cancel()
     }
+
     //3.CoroutineStart.LAZY
     fun coroutinesStartModeLazy() = runBlocking {
         val job = launch(start = CoroutineStart.LAZY) {
@@ -48,8 +49,9 @@ class StartMode {
         //等待主动调用协程，（start，join，await函数）协程调度前被取消，则进入异常状态
         job.cancel()
     }
+
     //4.CoroutineStart.UnDISPATCHED
-    fun coroutinesStartModeUnDispatched()= runBlocking {
+    fun coroutinesStartModeUnDispatched() = runBlocking {
         val job = launch(start = CoroutineStart.UNDISPATCHED, context = Dispatchers.IO) {
             println("ThreadName:" + Thread.currentThread().name)
             delay(5000)
@@ -62,7 +64,7 @@ class StartMode {
     }
 }
 
-fun main(){
+fun main() {
     val startMode = StartMode()
     startMode.coroutinesStartModeDefault()
     startMode.coroutinesStartModeAtomic()
