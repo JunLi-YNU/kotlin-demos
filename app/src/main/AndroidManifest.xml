@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Kotlin_demos"
         tools:targetApi="31">
         <activity
+            android:name=".flows.eg.activity.FlowDownloadActivity"
+            android:exported="false" />
+        <activity
             android:name=".coroutines.eg.activity.ExceptionHandlerActivity"
             android:exported="false" />
         <activity

@@ -139,3 +139,83 @@
 >3.通过exception.suppressed.contentToString()可以活取到后面的异常。
 
 ### 协程的并发安全
+**coroutine并发安全通过Atomic**
+```kotlin
+    fun concurrencyByAtomic() = runBlocking {
+        var count = AtomicInteger(0)
+        List(1000) {
+            GlobalScope.launch {
+                count.addAndGet(1)
+            }
+        }.joinAll()
+        println("Atomic:$count")
+    }
+```
+**coroutine并发安全通过Mutex**
+```kotlin
+    fun concurrencyByMutex() = runBlocking {
+        var count = 0
+        val mutex = Mutex()
+        List(1000) {
+            GlobalScope.launch {
+                mutex.withLock {
+                    count++
+                }
+            }
+        }.joinAll()
+        println("Mutex:$count")
+    }
+```
+**coroutine并发安全通过Semaphore**
+```kotlin
+    fun concurrencyBySemaphore() = runBlocking {
+        var count = 0
+        val semaphore = Semaphore(1)
+        List(1000) {
+            GlobalScope.launch {
+                semaphore.withPermit {
+                    count++
+                }
+            }
+        }.joinAll()
+        println("Atomic:$count")
+    }  //coroutine并发安全通过Atomic
+         fun concurrencyByAtomic() = runBlocking {
+             var count = AtomicInteger(0)
+             List(1000) {
+                 GlobalScope.launch {
+                     count.addAndGet(1)
+                 }
+             }.joinAll()
+             println("Atomic:$count")
+         }
+
+         //coroutine并发安全通过Mutex
+         fun concurrencyByMutex() = runBlocking {
+             var count = 0
+             val mutex = Mutex()
+             List(1000) {
+                 GlobalScope.launch {
+                     mutex.withLock {
+                         count++
+                     }
+                 }
+             }.joinAll()
+             println("Mutex:$count")
+         }
+```
+**coroutine并发安全通过Semaphore**
+```kotlin
+         fun concurrencyBySemaphore() = runBlocking {
+             var count = 0
+             val semaphore = Semaphore(1)
+             List(1000) {
+                 GlobalScope.launch {
+                     semaphore.withPermit {
+                         count++
+                     }
+                 }
+             }.joinAll()
+             println("Atomic:$count")
+         }
+```

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flows.eg.fragment.FlowDownloadHomeFragment"
+    style="?android:attr/buttonBarStyle"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_flow_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/button_download"
+        style="?android:attr/buttonBarButtonStyle"
+        />
+
+    <Button
+        android:id="@+id/btn_flow_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/button_flow_room"
+        style="?android:attr/buttonBarButtonStyle"
+        />
+
+    <Button
+        android:id="@+id/btn_flow_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/button_flow_retrofit"
+        style="?android:attr/buttonBarButtonStyle"
+        />
+
+    <Button
+        android:id="@+id/btn_state_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_state_flow"
+        style="?android:attr/buttonBarButtonStyle"
+        />
+
+    <Button
+        android:id="@+id/btn_shared_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_shared_flow"
+        style="?android:attr/buttonBarButtonStyle"
+        />
+</LinearLayout>

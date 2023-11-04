@@ -7,13 +7,13 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_caught_exception" />
+        app:layout_constraintTop_toBottomOf="@+id/button_flow" />
 
     <Button
         android:id="@+id/button_coroutines_http"
@@ -44,5 +44,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_coroutines_async" />
+
+    <Button
+        android:id="@+id/button_flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_flow"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_caught_exception" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

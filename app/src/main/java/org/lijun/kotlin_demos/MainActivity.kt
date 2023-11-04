@@ -9,6 +9,7 @@ import android.widget.Button
 import org.lijun.kotlin_demos.coroutines.eg.activity.CoroutinesAsyncActivity
 import org.lijun.kotlin_demos.coroutines.eg.activity.ExceptionHandlerActivity
 import org.lijun.kotlin_demos.coroutines.eg.activity.UserInformationActivity
+import org.lijun.kotlin_demos.flows.eg.activity.FlowDownloadActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         val buttonCaughtException = findViewById<Button>(R.id.button_caught_exception)
         buttonCaughtException.setOnClickListener {
             val intent = Intent(this, ExceptionHandlerActivity::class.java)
+            startActivity(intent)
+        }
+        val  buttonFlow = findViewById<Button>(R.id.button_flow)
+        buttonFlow.setOnClickListener {
+            val intent = Intent(this, FlowDownloadActivity::class.java)
             startActivity(intent)
         }
 

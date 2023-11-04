@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_download"
+    app:startDestination="@id/flowDownloadHomeFragment">
+
+    <fragment
+        android:id="@+id/flowDownloadHomeFragment"
+        android:name="org.lijun.kotlin_demos.flows.eg.fragment.FlowDownloadHomeFragment"
+        android:label="fragment_flow_download_home"
+        tools:layout="@layout/fragment_flow_download_home" >
+        <action
+            android:id="@+id/action_flowDownloadHomeFragment_to_flowDownLoadFragment"
+            app:destination="@id/flowDownLoadFragment" />
+        <action
+            android:id="@+id/action_flowDownloadHomeFragment_to_flowRoomFragment"
+            app:destination="@id/flowRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flowDownLoadFragment"
+        android:name="org.lijun.kotlin_demos.flows.eg.fragment.FlowDownLoadFragment"
+        android:label="fragment_flow_down_load"
+        tools:layout="@layout/fragment_flow_down_load" />
+    <fragment
+        android:id="@+id/flowRoomFragment"
+        android:name="org.lijun.kotlin_demos.flows.eg.fragment.FlowRoomFragment"
+        android:label="fragment_flow_room"
+        tools:layout="@layout/fragment_flow_room" />
+</navigation>
