@@ -1,7 +1,6 @@
 package org.lijun.kotlin_demos.coroutines.eg.api
 
 import android.util.Log
-import okhttp3.Call
 import okhttp3.OkHttpClient
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET

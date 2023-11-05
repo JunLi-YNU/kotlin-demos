@@ -51,7 +51,7 @@
     <string name="button_coroutines_async">Coroutines Or Async</string>
     <string name="textview_hint_retrofit">Information obtained from the internet</string>
     <string name="button_exception">Generate Exception</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="textview_progress">10%</string>
     <string name="button_download">Flow And Download</string>
     <string name="button_flow_room">Flow And Room</string>
@@ -59,11 +59,13 @@
     <string name="button_shared_flow">Shared Flow</string>
     <string name="button_flow_retrofit">Flow And Retrofit</string>
     <string name="button_flow">Flow</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="edit_text_name">User Name</string>
     <string name="edit_text_age">User Age</string>
     <string name="edit_text_sex">User Sex</string>
     <string name="button_user_info">User Information Insert</string>
+
+    <string name="retrofit_flow_search">Search</string>
 
 </resources>

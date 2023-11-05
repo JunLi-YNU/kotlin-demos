@@ -32,37 +32,39 @@ class FlowDownLoadFragment : Fragment() {
         lifecycleScope.launchWhenCreated {
             context?.apply {
                 val file = File(getExternalFilesDir(null)?.path, "demo.text")
-                Log.d("Download","FilePath:${file.path}")
-                DownloadManager.download("https://www.baidu.com/index.html", file).collect() { status ->
-                    when (status) {
-                        is DownloadStatus.Progress -> {
-                            fragmentFlowDownLoadBinding.apply {
-                                downloadProgressbar.progress = status.value
-                                tvProgess.text = "${status.value}"
+                Log.d("Download", "FilePath:${file.path}")
+                DownloadManager.download("https://www.baidu.com/index.html", file)
+                    .collect() { status ->
+                        when (status) {
+                            is DownloadStatus.Progress -> {
+                                fragmentFlowDownLoadBinding.apply {
+                                    downloadProgressbar.progress = status.value
+                                    tvProgress.text = "${status.value}"
+                                }
                             }
-                        }
 
-                        is DownloadStatus.Error -> {
-                            Log.e("Download", "${status.throwable}")
-                            Toast.makeText(
-                                context,
-                                "Download Error:${status.throwable}",
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
-
-                        is DownloadStatus.Done -> {
-                            fragmentFlowDownLoadBinding.apply {
-                                downloadProgressbar.progress = 100
-                                tvProgess.text = "100%"
+                            is DownloadStatus.Error -> {
+                                Log.e("Download", "${status.throwable}")
+                                Toast.makeText(
+                                    context,
+                                    "Download Error:${status.throwable}",
+                                    Toast.LENGTH_LONG
+                                ).show()
                             }
-                        }
 
-                        else -> {
-                            Toast.makeText(context, "Download failed.", Toast.LENGTH_LONG).show()
+                            is DownloadStatus.Done -> {
+                                fragmentFlowDownLoadBinding.apply {
+                                    downloadProgressbar.progress = 100
+                                    tvProgress.text = "100%"
+                                }
+                            }
+
+                            else -> {
+                                Toast.makeText(context, "Download failed.", Toast.LENGTH_LONG)
+                                    .show()
+                            }
                         }
                     }
-                }
             }
         }
     }
