@@ -33,5 +33,11 @@ class FlowDownloadHomeFragment : Fragment() {
         fragmentFlowDownloadHomeBinding.btnFlowRetrofit.setOnClickListener {
             findNavController().navigate(R.id.action_flowDownloadHomeFragment_to_flowRetrofitFragment)
         }
+        fragmentFlowDownloadHomeBinding.btnStateFlow.setOnClickListener {
+            findNavController().navigate(R.id.action_flowDownloadHomeFragment_to_stateFlowFragment)
+        }
+        fragmentFlowDownloadHomeBinding.btnSharedFlow.setOnClickListener {
+            findNavController().navigate(R.id.action_flowDownloadHomeFragment_to_sharedFlowFragment)
+        }
     }
 }

@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_flowDownloadHomeFragment_to_flowRetrofitFragment"
             app:destination="@id/flowRetrofitFragment" />
+        <action
+            android:id="@+id/action_flowDownloadHomeFragment_to_stateFlowFragment"
+            app:destination="@id/stateFlowFragment" />
+        <action
+            android:id="@+id/action_flowDownloadHomeFragment_to_sharedFlowFragment"
+            app:destination="@id/sharedFlowFragment" />
     </fragment>
     <fragment
         android:id="@+id/flowDownLoadFragment"
@@ -35,4 +41,14 @@
         android:name="org.lijun.kotlin_demos.flows.eg.fragment.FlowRetrofitFragment"
         android:label="fragment_flow_retrofit"
         tools:layout="@layout/fragment_flow_retrofit" />
+    <fragment
+        android:id="@+id/stateFlowFragment"
+        android:name="org.lijun.kotlin_demos.flows.stateflow.eg.fragment.StateFlowFragment"
+        android:label="fragment_state_flow"
+        tools:layout="@layout/fragment_state_flow" />
+    <fragment
+        android:id="@+id/sharedFlowFragment"
+        android:name="org.lijun.kotlin_demos.flows.sharedflow.eg.fragment.SharedFlowFragment"
+        android:label="fragment_shared_flow"
+        tools:layout="@layout/fragment_shared_flow" />
 </navigation>

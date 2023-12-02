@@ -1,5 +1,6 @@
 package org.lijun.kotlin_demos.flows.eg.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -67,5 +68,9 @@ class FlowDownLoadFragment : Fragment() {
                     }
             }
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
